@@ -1,4 +1,4 @@
-## Description du projet
+# Description du projet
 
 Ce projet implémente une variante du jeu Puissance 4 dans un environnement partiellement observable. La spécificité de cette version du jeu de Puissance 4 est que notre joueur (IA) ne peux pas toujours voir les jetons posés par son adversaire. Plus précisément, il ne peut voir que les jetons qui se trouve en dessous d’un des jetons qu’il a posés. Il peut également voir tous les jetons d’une colonne pleine (afin de voir qu’il ne peut plus jouer dans cette colonne). 
 
@@ -20,7 +20,7 @@ Le projet comprend plusieurs fichiers Java:
 
 * AI.java : Implémente l'intelligence artificielle.
 
-## Fonctionnement général
+# Fonctionnement général
 
 Le jeu suit les règles classiques de Connect 4 : les joueurs placent des pièces chacun leur tour jusqu'à obtenir une séquence gagnante ou atteindre un état d'égalité.
 
@@ -28,7 +28,7 @@ L'IA sélectionne automatiquement le meilleur coup pour nous.
 
 Fin du jeu : Le jeu s'arrête dès qu'un joueur aligne quatre jetons ou que la grille est remplie.
 
-# La classe AI implémente une intelligence artificielle avancée capable d'évaluer les états du jeu et de choisir le coup optimal.
+## La classe AI implémente une intelligence artificielle avancée capable d'évaluer les états du jeu et de choisir le coup optimal.
 
 Attributs
 
