@@ -30,19 +30,9 @@ Fin du jeu : Le jeu s'arrête dès qu'un joueur aligne quatre jetons ou que la g
 
 ## La classe AI implémente une intelligence artificielle avancée capable d'évaluer les états du jeu et de choisir le coup optimal.
 
-Attributs
-
-* ExploredSet cache : Cache les états explorés pour éviter les répétitions inutiles.
-
-* POSITIONAL_SCORE : Matrice de scores positionnels pour encourager les placements centraux.
-
-* PROBA_THRESHOLD : Seuil de probabilité pour filtrer les états.
-
-* DEPTH : Profondeur maximale de la recherche.
-
 Méthodes principales
 
-findNextMove(BeliefState beliefState) : 
+### findNextMove(BeliefState beliefState) : 
 
 * Détermine le meilleur coup pour l'IA en utilisant la recherche AND-OR.
 
@@ -52,7 +42,7 @@ findNextMove(BeliefState beliefState) :
 
 * Retourne l'indice de la colonne sélectionnée.
 
-andOrSearch(BeliefState beliefState, int depth, float alpha, float beta, Set<BeliefState> path) : 
+### andOrSearch(BeliefState beliefState, int depth, float alpha, float beta, Set<BeliefState> path) : 
 
 * Effectue une recherche AND-OR avec élagage alpha-bêta.
 
@@ -62,7 +52,7 @@ andOrSearch(BeliefState beliefState, int depth, float alpha, float beta, Set<Bel
 
 * Retourne un score estimant la valeur du coup.
 
-evaluateTerminalState(BeliefState beliefState) :
+### evaluateTerminalState(BeliefState beliefState) :
 
 * Évalue un état terminal :
 
@@ -70,20 +60,20 @@ evaluateTerminalState(BeliefState beliefState) :
 
 * Retourne un score faible si l'adversaire gagne.
 
-evaluateNonTerminalState(BeliefState beliefState)
+### evaluateNonTerminalState(BeliefState beliefState)
 
 * Utilise une heuristique pour évaluer les positions des jetons.
 
 * Prend en compte le score positionnel et les alignements partiels.
 
-findImmediateWin(BeliefState beliefState)
+### findImmediateWin(BeliefState beliefState)
 
 * Vérifie s'il existe un coup gagnant immédiat pour l'IA.
 
-findImmediateThreat(BeliefState beliefState)
+### findImmediateThreat(BeliefState beliefState)
 
 * Vérifie si l'adversaire peut gagner immédiatement et tente de le bloquer.
 
-canonicalizeBeliefState(BeliefState beliefState)
+### canonicalizeBeliefState(BeliefState beliefState)
 
 * Normalise et arrondit les probabilités d'un état de croyance pour éviter les erreurs de précision.
