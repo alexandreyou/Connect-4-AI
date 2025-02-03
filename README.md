@@ -30,8 +30,6 @@ Fin du jeu : Le jeu s'arrête dès qu'un joueur aligne quatre jetons ou que la g
 
 ## La classe AI implémente une intelligence artificielle avancée capable d'évaluer les états du jeu et de choisir le coup optimal.
 
-Méthodes principales
-
 ### findNextMove(BeliefState beliefState) : 
 
 * Détermine le meilleur coup pour l'IA en utilisant la recherche AND-OR.
@@ -48,23 +46,21 @@ Méthodes principales
 
 * Explore récursivement les états du jeu jusqu'à atteindre une profondeur limite ou un état terminal.
 
-* Utilise un cache pour éviter les recomptes inutiles.
-
 * Retourne un score estimant la valeur du coup.
 
+* Utilise un cache pour éviter les recomptes inutiles.
+  
 ### evaluateTerminalState(BeliefState beliefState) :
 
 * Évalue un état terminal :
 
-* Retourne un score élevé si l'IA gagne.
-
-* Retourne un score faible si l'adversaire gagne.
+  * Retourne un score élevé si l'IA gagne.
+  
+  * Retourne un score faible si l'adversaire gagne.
 
 ### evaluateNonTerminalState(BeliefState beliefState)
 
-* Utilise une heuristique pour évaluer les positions des jetons.
-
-* Prend en compte le score positionnel et les alignements partiels.
+* Utilise une heuristique basé sur le positionnement (privilégie le centre du plateau et les alignements partiels) pour évaluer les positions des jetons.
 
 ### findImmediateWin(BeliefState beliefState)
 
@@ -76,4 +72,4 @@ Méthodes principales
 
 ### canonicalizeBeliefState(BeliefState beliefState)
 
-* Normalise et arrondit les probabilités d'un état de croyance pour éviter les erreurs de précision.
+* Normalise et arrondit les probabilités d'un état de croyance pour éviter les erreurs de précision qui résulteraient à une sous-utilisation du cache.
